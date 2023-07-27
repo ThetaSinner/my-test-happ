@@ -1,0 +1,19 @@
+---
+manifest_version: "1"
+name: my-test-happ
+description: ~
+roles:
+  - name: todos
+    provisioning:
+      strategy: create
+      deferred: false
+    dna:
+      bundled: "../dnas/todos/workdir/todos.dna"
+      modifiers:
+        network_seed: ~
+        properties: ~
+        origin_time: ~
+        quantum_time: ~
+      installed_hash: ~
+      _version: ~
+      clone_limit: 0

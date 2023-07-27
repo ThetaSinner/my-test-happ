@@ -1,0 +1,19 @@
+---
+manifest_version: "1"
+name: todos
+integrity:
+  network_seed: ~
+  properties: ~
+  origin_time: 1690469631469613
+  zomes:
+    - name: todos_integrity
+      hash: ~
+      bundled: "../../../target/wasm32-unknown-unknown/release/todos_integrity.wasm"
+      dependencies: ~
+coordinator:
+  zomes:
+    - name: todos
+      hash: ~
+      bundled: "../../../target/wasm32-unknown-unknown/release/todos.wasm"
+      dependencies:
+        - name: todos_integrity
